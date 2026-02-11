@@ -65,3 +65,7 @@ a {
     color: #778b4c;
     text-decoration: none;
 }
+
+a:hover {
+    text-decoration: underline;
+}
