@@ -2,7 +2,7 @@ name: Deploy to cPanel
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   deploy:
@@ -14,7 +14,7 @@ jobs:
       - name: Deploy to cPanel FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: web244.dnchosting.com    # Your cPanel server
-          username: epossib3                 # Your cPanel username
+          server: web244.dnchosting.com # Your cPanel server
+          username: epossib3 # Your cPanel username
           password: ${{ secrets.CPANEL_PASSWORD }}
           server-dir: /public_html/
