@@ -1,0 +1,201 @@
+/* ========================================
+   1. SETTINGS / IMPORTS
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* ========================================
+   2. BASE
+   ======================================== */
+body { 
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 64px auto;
+    padding: 0 24px;
+}
+
+/* ========================================
+   3. TYPOGRAPHY
+   ======================================== */
+.bold-text {
+    font-weight: bold;
+}
+
+.large-text {
+    font-size: 24px;
+}
+
+
+/* ========================================
+   4. COMPONENTS
+   ======================================== */
+.image {
+    display: block;
+    width: 97%;
+    height: auto;
+    margin: auto;
+    border-radius: 4px;
+}
+
+.p-margins {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+
+/* ========================================
+   5. UTILITIES
+   Single-purpose, immutable helpers
+   ======================================== */
+.m-0 {
+    margin: 0 !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-12 {
+    margin-bottom: 12px !important;
+}
+
+.corner-radius {
+    border-radius: 4px;
+}
+
+/* Contextual utility: removes gap between header and following paragraph */
+.mb-0+p {
+    margin-top: 0;
+}
+
+/* ========================================
+   6. LIGHTBOX / ZOOMED VIEW
+   Image lightbox styling and mechanics
+   ======================================== */
+
+/* 1. The Container
+   Hidden by default, fixed to cover the screen */
+#zoomed-view {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+/* 2. The Active State 
+   When the URL ends in #zoomed-view, show this container
+   and use Flexbox to center the image */
+#zoomed-view:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 3. The Backdrop (The "Close" Button)
+   This invisible link covers the whole screen behind the image.
+   Clicking it changes the URL to "#", closing the view. */
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark transparent background */
+    cursor: zoom-out; /* Changes mouse to a "minus" icon */
+}
+
+/* 4. The Image
+   Sits on top of the backdrop, centered and large. */
+#zoomed-view img {
+    /* Huge size limits */
+    height: 80vh;
+    max-width: 98%;
+    max-height: 80vh;
+    
+    /* Ensure it sits ON TOP of the clickable background */
+    position: relative;
+    z-index: 1000;
+    
+    /* Pretty formatting */
+    object-fit: contain;
+    box-shadow: 0 0 20px black;
+    border-radius: 4px;
+}
+
+/* ========================================
+   6. LINK PREVIEW LIGHTBOX
+   Link preview styling and mechanics
+   ======================================== */
+
+/* Re-use the lightbox logic for the container */
+#link-preview {
+    display: none;
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 999;
+}
+
+#link-preview:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The White Box Container */
+.preview-box {
+    position: relative;
+    z-index: 1000;
+    width: 80%;       /* Takes up 80% of screen width */
+    height: 80vh;     /* Takes up 80% of screen height */
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    overflow: hidden; /* Clips corners */
+}
+
+/* The Iframe (The mini browser) */
+.preview-box iframe {
+    width: 100%;
+    flex-grow: 1; /* Fills all available space */
+    border: none;
+}
+
+/* The Footer Bar */
+.preview-footer {
+    height: 50px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* The Button Styling */
+.btn {
+    background: #0078d4; /* Windows Blue */
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background: #005a9e;
+}
