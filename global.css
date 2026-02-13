@@ -1,19 +1,30 @@
 /* ========================================
    1. SETTINGS / IMPORTS
    ======================================== */
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+    font-family: 'Inter';
+    src: url(/fonts/InterVariable.woff2) format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Inter';
+    src: url(/fonts/InterVariable-Italic.woff2) format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
 
 /* ========================================
    2. BASE
    ======================================== */
+   
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-main {
+    font-family: 'Inter', sans-serif;   
+    justify-content: center;
+    align-items: center;
     max-width: 800px;
     margin: 64px auto;
     padding: 0 24px;
@@ -22,14 +33,10 @@ main {
 /* ========================================
    3. TYPOGRAPHY
    ======================================== */
-.bold-text {
-    font-weight: bold;
-}
 
 .large-text {
     font-size: 24px;
 }
-
 
 /* ========================================
    4. COMPONENTS
