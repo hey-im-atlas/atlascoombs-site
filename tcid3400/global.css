@@ -110,10 +110,11 @@ body {
    Sits on top of the backdrop, centered and large. */
 #zoomed-view img {
     /* Huge size limits */
-    /* height: 80vh; */
+    height: auto;
     max-width: 90%;
     max-height: 95%;
 
+    
     /* Ensure it sits ON TOP of the clickable background */
     position: relative;
     z-index: 1000;
@@ -122,6 +123,12 @@ body {
     object-fit: contain;
     box-shadow: 0 0 20px black;
     border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+    #zoomed-view img {
+        height: 80vh;
+    }
 }
 
 /* ========================================
