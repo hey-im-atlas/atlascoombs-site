@@ -110,7 +110,7 @@ body {
    Sits on top of the backdrop, centered and large. */
 #zoomed-view img {
     /* Huge size limits */
-    height: 80vh;
+    /* height: 80vh; */
     max-width: 98%;
     max-height: 80vh;
 
