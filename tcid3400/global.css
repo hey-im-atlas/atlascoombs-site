@@ -106,6 +106,10 @@ body {
     /* Changes mouse to a "minus" icon */
 }
 
+a[href="#zoomed-view"] {
+    -webkit-tap-highlight-color: transparent;
+}
+
 /* 4. The Image
    Sits on top of the backdrop, centered and large. */
 #zoomed-view img {
