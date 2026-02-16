@@ -111,8 +111,8 @@ body {
 #zoomed-view img {
     /* Huge size limits */
     /* height: 80vh; */
-    max-width: 98%;
-    max-height: 80vh;
+    max-width: 90%;
+    max-height: 80%;
 
     /* Ensure it sits ON TOP of the clickable background */
     position: relative;
