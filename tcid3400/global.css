@@ -112,7 +112,7 @@ body {
     /* Huge size limits */
     height: auto;
     max-width: 90%;
-    max-height: 95%;
+    max-height: 100%;
 
     
     /* Ensure it sits ON TOP of the clickable background */
@@ -127,7 +127,7 @@ body {
 
 @media (min-width: 768px) {
     #zoomed-view img {
-        height: 50vh;
+        height: 100vh;
     }
 }
 
