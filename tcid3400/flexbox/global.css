@@ -31,9 +31,9 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 250px);
     gap: 20px;
-    width: 100%;
-    padding: 50px;
-    box-sizing: border-box;
+    padding: 50px; /* Adds the 50px space inside the edges */
+    width: 100%; /* Ensures it reaches the sides */
+    box-sizing: border-box; /* Prevents the padding from making the page too wide (scrollbars) */
 }
 
 main div {
