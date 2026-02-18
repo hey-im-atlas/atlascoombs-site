@@ -29,11 +29,19 @@ nav {
 main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+<<<<<<< HEAD
     grid-template-rows: repeat(3, 250px); 
     gap: 20px;
     max-width: 800px;
     margin: 0 auto;
     padding: 50px;
+=======
+    grid-template-rows: repeat(3, 250px);
+    gap: 20px;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+>>>>>>> 3588f00 (hackathon)
 }
 
 main div {
