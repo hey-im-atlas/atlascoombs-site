@@ -67,3 +67,66 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* ========================================
+   Dark Mode Support
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+    }
+
+    .card-container {
+        background-color: #1e1e1e;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-header {
+        background-color: #3d4726; /* Slightly darker olive green */
+    }
+
+    .card-body {
+        color: #e0e0e0; /* Light gray text for readability */
+    }
+
+    .email {
+        color: #aaaaaa;
+    }
+
+    a {
+        color: #8da65a; /* Lighter olive green for better contrast on dark backgrounds */
+    }
+
+    a:hover {
+        color: #a4c26b;
+    }
+}
+
+body.dark-mode {
+    background-color: #121212;
+}
+
+body.dark-mode .card-container {
+    background-color: #1e1e1e;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .card-header {
+    background-color: #3d4726;
+}
+
+body.dark-mode .card-body {
+    color: #e0e0e0;
+}
+
+body.dark-mode .email {
+    color: #aaaaaa;
+}
+
+body.dark-mode a {
+    color: #8da65a;
+}
+
+body.dark-mode a:hover {
+    color: #a4c26b;
+}
