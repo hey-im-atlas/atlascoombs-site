@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'InterVariable', serif;
 }
 
 header {
@@ -31,9 +31,9 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 250px);
     gap: 20px;
-    padding: 50px; /* Adds the 50px space inside the edges */
-    width: 100%; /* Ensures it reaches the sides */
-    box-sizing: border-box; /* Prevents the padding from making the page too wide (scrollbars) */
+    padding: 50px; 
+    width: 100%; 
+    box-sizing: border-box;
 }
 
 main div {
@@ -45,13 +45,13 @@ main div {
     font-weight: bold;
 }
 
-.item-1 {
-    background-color: #FF6060;
-}
-.item-2 {
+.grid-item {
     background-color: #D9D9D9;
 }
 
+.item-1 {
+    background-color: #FF6060;
+}
 
 .item-3 {
     background-color: #60C2FF;
@@ -70,11 +70,4 @@ main div {
 }
 .item-5 {
     background-color: #60C2FF;
-}
-.item-6 {
-    background-color: #D9D9D9;
-}
-
-text {
-    color: white;
 }
